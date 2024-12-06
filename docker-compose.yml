@@ -1,0 +1,8 @@
+services:
+  wpf-app:
+    build: .
+    ports:
+      - "5900:5900"
+    environment:
+      - DISPLAY=:0
+    privileged: true
