@@ -1,0 +1,50 @@
+.unread-contact {
+    font-weight: bold;
+    color: #2196F3;
+}
+
+.new-message {
+    background-color: #e3f2fd;
+    border-left: 3px solid #2196F3;
+    padding: 5px;
+    margin: 2px 0;
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    from { background-color: #e3f2fd; }
+    to { background-color: transparent; }
+}
+
+.message-time {
+    color: #757575;
+    font-size: 0.9em;
+}
+
+.message-sender {
+    font-weight: bold;
+    color: #1976D2;
+}
+
+.message-content {
+    margin-left: 5px;
+}
+
+.unread-message {
+    background-color: #e3f2fd;
+    border-left: 3px solid #2196F3;
+    padding: 5px;
+    margin: 2px 0;
+    animation: highlight 2s ease-out;
+}
+
+@keyframes highlight {
+    0% {
+        background-color: #e3f2fd;
+        border-left-color: #2196F3;
+    }
+    100% {
+        background-color: transparent;
+        border-left-color: transparent;
+    }
+}

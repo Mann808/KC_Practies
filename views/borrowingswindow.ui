@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BorrowingsWindow</class>
+ <widget class="QDialog" name="BorrowingsWindow">
+  <property name="windowTitle">
+   <string>Управление бронированиями</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="myBorrowingsGroupBox">
+     <property name="title">
+      <string>Мои бронирования</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTableView" name="myBorrowingsTableView"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="returnButton">
+        <property name="text">
+         <string>Вернуть</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="requestsGroupBox">
+     <property name="title">
+      <string>Запросы от других пользователей</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QTableView" name="requestsTableView"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="confirmButton">
+          <property name="text">
+           <string>Подтвердить</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="declineButton">
+          <property name="text">
+           <string>Отклонить</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

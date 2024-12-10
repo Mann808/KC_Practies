@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameDetailsWindow</class>
+ <widget class="QDialog" name="GameDetailsWindow">
+  <property name="windowTitle">
+   <string>Детали игры</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="titleLabel">
+       <property name="text">
+        <string>Название игры</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="publisherLabel">
+       <property name="text">
+        <string>Издатель: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="yearLabel">
+       <property name="text">
+        <string>Год выпуска: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="genresLabel">
+       <property name="text">
+        <string>Жанры: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="averageRatingLabel">
+       <property name="text">
+        <string>Средний рейтинг: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="totalCopiesLabel">
+       <property name="text">
+        <string>Общее количество копий: </string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="descriptionTextEdit">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Пользователи с этой игрой</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTableView" name="usersTableView"/>
+      </item>
+      <item>
+       <layout class="QFormLayout" name="borrowingForm">
+        <item row="0" column="0">
+         <widget class="QLabel" name="startDateLabel">
+          <property name="text">
+           <string>Дата начала:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDateEdit" name="startDateEdit">
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="endDateLabel">
+          <property name="text">
+           <string>Дата окончания:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDateEdit" name="endDateEdit">
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="borrowButton">
+        <property name="text">
+         <string>Забронировать</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="ratingLayout">
+     <item>
+      <widget class="QLabel" name="ratingLabel">
+       <property name="text">
+        <string>Ваша оценка:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="ratingSpinBox">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>5</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="rateButton">
+       <property name="text">
+        <string>Оценить</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

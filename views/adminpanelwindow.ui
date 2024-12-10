@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminPanelWindow</class>
+ <widget class="QDialog" name="AdminPanelWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>544</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Панель администратора</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="usersTab">
+      <attribute name="title">
+       <string>Пользователи</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QTableView" name="usersTableView"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="blockUserButton">
+           <property name="text">
+            <string>Блокировать</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="unblockUserButton">
+           <property name="text">
+            <string>Разблокировать</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="genresTab">
+      <attribute name="title">
+       <string>Жанры</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QTableView" name="genresTableView"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="addGenreButton">
+           <property name="text">
+            <string>Добавить</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="editGenreButton">
+           <property name="text">
+            <string>Редактировать</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="deleteGenreButton">
+           <property name="text">
+            <string>Удалить</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="logsTab">
+      <attribute name="title">
+       <string>Логи</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="datesLayout">
+         <item>
+          <widget class="QLabel" name="startDateLabel">
+           <property name="text">
+            <string>Начальная дата:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="startDateEdit">
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="endDateLabel">
+           <property name="text">
+            <string>Конечная дата:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="endDateEdit">
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTableView" name="logsTableView"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="buttonsLayout">
+         <item>
+          <widget class="QPushButton" name="refreshLogsButton">
+           <property name="text">
+            <string>Обновить</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="archiveLogsButton">
+           <property name="text">
+            <string>Архивировать</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="deleteLogsButton">
+           <property name="text">
+            <string>Удалить</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="importLogsButton">
+           <property name="text">
+            <string>Импортировать</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="backupsTab">
+      <attribute name="title">
+       <string>Резервные копии</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QTableView" name="backupsTableView"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="backupButtonsLayout">
+         <item>
+          <widget class="QPushButton" name="createBackupButton">
+           <property name="text">
+            <string>Создать резервную копию</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="restoreBackupButton">
+           <property name="text">
+            <string>Восстановить из резервной копии</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="statisticsTab">
+      <attribute name="title">
+       <string>Статистика</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QTabWidget" name="statisticsTabWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="genreStatsTab">
+          <attribute name="title">
+           <string>Статистика жанров</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_7" stretch="3,1,1">
+           <item>
+            <widget class="QGraphicsView" name="genreChartView">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>3</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="genreStatsDescription">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTableView" name="genreStatsTable">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="borrowingStatsTab">
+          <attribute name="title">
+           <string>Статистика бронирований</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_8" stretch="3,1,1">
+           <item>
+            <widget class="QGraphicsView" name="borrowingChartView">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>3</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="borrowingStatsDescription">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTableView" name="borrowingStatsTable">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="ratingStatsTab">
+          <attribute name="title">
+           <string>Статистика рейтингов</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_9" stretch="3,1,1">
+           <item>
+            <widget class="QGraphicsView" name="ratingChartView">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>3</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="ratingStatsDescription">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTableView" name="ratingStatsTable">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="userActivityTab">
+          <attribute name="title">
+           <string>Активность пользователей</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_10" stretch="3,1,1">
+           <item>
+            <widget class="QGraphicsView" name="userActivityChartView">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>3</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="userActivityDescription">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTableView" name="userActivityTable">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="maintenanceTab">
+      <attribute name="title">
+       <string>Обслуживание БД</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <widget class="QGroupBox" name="maintenanceGroupBox">
+         <property name="title">
+          <string>Статус системы</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lastBackupLabel">
+            <property name="text">
+             <string>Последний бэкап:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="lastBackupValue"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="activeBorrowingsLabel">
+            <property name="text">
+             <string>Активные бронирования:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="activeBorrowingsValue"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="databaseSizeLabel">
+            <property name="text">
+             <string>Размер базы данных:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="databaseSizeValue"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="maintenanceButton">
+         <property name="text">
+          <string>Выполнить обслуживание</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableView" name="maintenanceLogTable"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="dataManagementTab">
+      <attribute name="title">
+       <string>Управление данными</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_12">
+       <item>
+        <widget class="QGroupBox" name="exportGroupBox">
+         <property name="title">
+          <string>Экспорт данных</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QComboBox" name="exportTypeCombo">
+            <item>
+             <property name="text">
+              <string>Игры</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Бронирования</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Статистика</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="exportButton">
+            <property name="text">
+             <string>Экспорт в CSV</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="importGroupBox">
+         <property name="title">
+          <string>Импорт данных</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_import">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QComboBox" name="importTypeCombo">
+              <item>
+               <property name="text">
+                <string>Игры</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Бронирования</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="replaceExistingCheckBox">
+              <property name="text">
+               <string>Заменять существующие</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="importButton">
+              <property name="text">
+               <string>Импорт из CSV</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTabWidget" name="dataViewsTab">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="activeBorrowingsTab">
+          <attribute name="title">
+           <string>Активные бронирования</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item>
+            <widget class="QTableView" name="activeBorrowingsTable"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="userStatsTab">
+          <attribute name="title">
+           <string>Статистика пользователей</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <widget class="QTableView" name="userStatsTable"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="popularGamesTab">
+          <attribute name="title">
+           <string>Популярные игры</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <item>
+            <widget class="QTableView" name="popularGamesTable"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

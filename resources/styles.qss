@@ -1,0 +1,20 @@
+QListView::item:selected {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+QListView::item:hover {
+    background-color: #f0f0f0;
+}
+
+QTextEdit {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.unread-message {
+    background-color: #e6f3ff;
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 4px;
+}

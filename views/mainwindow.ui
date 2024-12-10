@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowTitle">
+   <string>Система Управления Коллекцией Настольных Игр</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="toolbarLayout">
+      <item>
+       <widget class="QPushButton" name="addGameButton">
+        <property name="text">
+         <string>Добавить игру</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="chatButton">
+        <property name="text">
+         <string>Чат</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="borrowingsButton">
+        <property name="text">
+         <string>Бронирования</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="adminPanelButton">
+        <property name="text">
+         <string>Панель администратора</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="logoutButton">
+        <property name="text">
+         <string>Выйти</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="searchFilterLayout">
+      <item>
+       <widget class="QLabel" name="searchLabel">
+        <property name="text">
+         <string>Поиск:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="searchLineEdit"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="genreLabel">
+        <property name="text">
+         <string>Жанр:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="genreComboBox"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableView" name="gamesTableView"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

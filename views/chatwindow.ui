@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChatWindow</class>
+ <widget class="QDialog" name="ChatWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Чат</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="searchLabel">
+       <property name="text">
+        <string>Поиск пользователей:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="searchLineEdit"/>
+     </item>
+     <item>
+      <widget class="QListView" name="contactsListView">
+       <property name="minimumWidth">
+        <number>200</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QTextEdit" name="chatTextEdit">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="messageLayout">
+       <item>
+        <widget class="QLineEdit" name="messageLineEdit"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="sendMessageButton">
+         <property name="text">
+          <string>Отправить</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
