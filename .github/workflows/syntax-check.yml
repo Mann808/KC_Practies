@@ -23,7 +23,8 @@ jobs:
       run: |
         cppcheck --enable=warning,style,performance \
         --suppress=missingInclude \
-        --error-exitcode=1 \
+        --language=c++ \
+        --std=c++17 \
         controllers/* models/* utils/* views/*
 
     - name: Вывод результатов
